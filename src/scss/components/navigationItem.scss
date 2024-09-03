@@ -1,0 +1,26 @@
+.navigation-item {
+  &__button {
+    border-radius: 50%;
+    border: 1px solid $light-min-opacity;
+    width: 70px;
+    height: 70px;
+
+    @media (max-width: 1340px) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 1115px) {
+      width: 40px;
+      height: 40px;
+    }
+
+    img {
+      width: 30px;
+
+      @media (max-width: 1115px) {
+        width: 14px;
+      }
+    }
+  }
+}

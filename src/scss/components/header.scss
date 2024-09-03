@@ -1,0 +1,32 @@
+.header {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: minmax(18.3%, 330px) minmax(25%, 460px) 1fr;
+  align-items: center;
+  column-gap: 60px;
+  border-bottom: 2px solid $light-max-opacity;
+
+  @media (max-width: 1115px) {
+    column-gap: 30px;
+    padding: 27px 0;
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: minmax(142px, 1fr) 1fr;
+    column-gap: 48px;
+  }
+
+  nav {
+    justify-self: end;
+  }
+
+  &__navigation-list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    @media (max-width: 1340px) {
+      gap: 15px;
+    }
+  }
+}

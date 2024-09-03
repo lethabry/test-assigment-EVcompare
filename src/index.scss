@@ -1,6 +1,9 @@
 @import './scss/variables';
 @import './scss/normalize';
 @import './scss/font';
+@import './scss/components/header.scss';
+@import './scss/components/searchForm.scss';
+@import './scss/components/navigationItem.scss';
 
 :root {
   font-family: 'Montserrat', sans-serif;
