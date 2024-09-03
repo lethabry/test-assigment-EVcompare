@@ -1,0 +1,13 @@
+@import './scss/variables';
+@import './scss/normalize';
+@import './scss/font';
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $light;
+}
