@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect, memo } from 'react';
+import { useState, useEffect } from 'react';
 import { navlistDesktop, navlistMobile } from '../utils/constants/navlist';
 import NavigationItem from './NavigationItem';
 import SearchForm from './SearchForm';
 
-const Header: React.FC = memo(() => {
+const Header: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -43,6 +43,6 @@ const Header: React.FC = memo(() => {
       </nav>
     </header>
   );
-});
+};
 
 export default Header;

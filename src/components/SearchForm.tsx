@@ -3,7 +3,7 @@
  * @TODO добавить label для инпута
  */
 
-const SearchForm = () => {
+const SearchForm: React.FC = () => {
   return (
     <form method="submit" className="search-form">
       <button type="submit" className="search-form__button">
