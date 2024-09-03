@@ -1,7 +1,13 @@
 import BreadCrumb from '../components/BreadCrumb';
+import News from '../components/News';
 
 const MainPage: React.FC = () => {
-  return <BreadCrumb />;
+  return (
+    <>
+      <BreadCrumb />
+      <News />
+    </>
+  );
 };
 
 export default MainPage;
