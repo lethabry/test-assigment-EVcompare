@@ -3,7 +3,7 @@ const BreadCrumb: React.FC = () => {
     <nav className="bread-crumb">
       <div>
         <span>Main Page</span>
-        <img src={'/images/arrow.svg'} alt="Разделитель" />
+        <img src={'/src/assets/images/arrow.svg'} alt="Разделитель" />
         <span>Новости и анонсы</span>
         <hr />
       </div>

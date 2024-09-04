@@ -7,7 +7,7 @@ const SearchForm: React.FC = () => {
   return (
     <form method="submit" className="search-form">
       <button type="submit" className="search-form__button">
-        <img src={'/images/searchIcon.svg'} alt="Кнопка поиска" />
+        <img src={'/src/assets/images/searchIcon.svg'} alt="Кнопка поиска" />
       </button>
       <input
         type="text"

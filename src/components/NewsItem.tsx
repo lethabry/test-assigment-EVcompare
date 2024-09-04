@@ -12,7 +12,7 @@ const NewsItem: React.FC<INewsItem> = ({
       <article>
         <img
           className="news-item__image"
-          src={`/images/newsImgs/${imgName}`}
+          src={`/src/assets/images/newsImgs/${imgName}`}
           alt={`${title}`}
         />
         <div className="news-item__info">

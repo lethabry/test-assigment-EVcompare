@@ -11,7 +11,10 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <Link to="/" className="header__logo">
-        <img src={'/images/logo.png'} alt="Логотип приложения EvCompaire" />
+        <img
+          src={'/src/assets/images/logo.png'}
+          alt="Логотип приложения EvCompaire"
+        />
       </Link>
       {windowWidth > 650 && <SearchForm />}
 

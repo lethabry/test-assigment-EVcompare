@@ -8,7 +8,11 @@ const NavigationButton: React.FC<{
 }> = ({ imgSrc, altText, className, path }) => {
   return (
     <Link to={path} className="navigation-item__link">
-      <img src={`/images/${imgSrc}`} alt={altText} className={className} />
+      <img
+        src={`/src/assets/images/${imgSrc}`}
+        alt={altText}
+        className={className}
+      />
     </Link>
   );
 };
