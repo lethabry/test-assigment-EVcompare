@@ -1,5 +1,6 @@
 .news-item {
   border-radius: 20px;
+  border: 1px solid $light;
 
   &__image {
     border-radius: 20px 20px 0 0;
@@ -17,6 +18,12 @@
     margin-bottom: 15px;
     text-align: center;
     line-height: 29.26px;
+
+    @media (max-width: 650px) {
+      height: 40px;
+      font-size: 14px;
+      line-height: 17.07px;
+    }
   }
 
   &__description {
@@ -25,6 +32,11 @@
     line-height: 17.07px;
     margin-bottom: 15px;
     color: $light-max-opacity;
+
+    @media (max-width: 650px) {
+      font-size: 12px;
+      line-height: 14.63px;
+    }
   }
 
   &__extra-info {
@@ -33,5 +45,10 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 17.07px;
+
+    @media (max-width: 650px) {
+      font-size: 12px;
+      line-height: 14.63px;
+    }
   }
 }
