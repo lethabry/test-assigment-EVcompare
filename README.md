@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# test-assigment-evcompare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Тестовое задание
 
-Currently, two official plugins are available:
+Ссылка на макет в figma: [ссылка](https://www.figma.com/design/aYVPpqWbSkeL0AA6cMBTq1/Test?node-id=6-70&node-type=CANVAS&t=hbOTghoLKlGPELMF-0)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Описание проекта
 
-## Expanding the ESLint configuration
+Проект "EVcompare" - двухстраничное приложение, состоящее из статической главной страницы и страницы с регистрацией.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 2. Стек
 
-- Configure the top-level `parserOptions` property like this:
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 3. Установка и запуск приложения в локальном репозитории
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    git clone git@github.com:lethabry/test-assigment-EVcompare.git - клонировать репозиторий на свое устройство
+    npm i - установить зависимости
+    npm run dev - запустить приложение
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 4. Функционал
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Регистрация пользователя
+- Валидация данных при регистрации
+- Статическая страница
+
+## 5. Статус
+
+Проект завершен
