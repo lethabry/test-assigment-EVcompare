@@ -1,19 +1,12 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { WindowWidthContext } from '../context/windowWidthContext';
 import { navlistDesktop, navlistMobile } from '../utils/constants/navlist';
 import NavigationItem from './NavigationItem';
 import SearchForm from './SearchForm';
 
 const Header: React.FC = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleChangeWidth = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleChangeWidth);
-    return () => {
-      window.removeEventListener('resize', handleChangeWidth);
-    };
-  }, [windowWidth]);
+  const windowWidth = useContext(WindowWidthContext);
 
   return (
     <header className="header">

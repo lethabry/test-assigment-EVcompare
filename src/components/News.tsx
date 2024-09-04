@@ -1,18 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { WindowWidthContext } from '../context/windowWidthContext';
 import { newsList } from '../utils/constants/newslist';
 import NavigationItem from './NavigationItem';
 import NewsItem from './NewsItem';
 
 const News: React.FC = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleChangeWidth = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleChangeWidth);
-    return () => {
-      window.removeEventListener('resize', handleChangeWidth);
-    };
-  }, [windowWidth]);
+  const windowWidth = useContext(WindowWidthContext);
 
   return (
     <section className="news">
