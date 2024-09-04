@@ -6,3 +6,11 @@ export interface INewsItem {
   author: string;
   date: string;
 }
+
+export interface IInput {
+  inputType: string;
+  inputName: string;
+  labelText: string;
+  inputId: string;
+  inputPlaceholder: string;
+}

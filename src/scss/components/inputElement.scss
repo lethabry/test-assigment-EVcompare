@@ -1,0 +1,33 @@
+.input-element {
+  width: calc(50% - 13px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+
+  &__label {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+  }
+
+  &__input {
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.5px;
+    width: 100%;
+    border-radius: 100px;
+    border: 2px solid $light;
+    &::placeholder {
+      color: $light-max-opacity;
+    }
+  }
+
+  &__error {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    color: $active;
+  }
+}

@@ -1,0 +1,44 @@
+.registration {
+  padding: 50px 0 86px;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.76px;
+    margin-bottom: 48px;
+  }
+
+  &__form {
+    padding: 48px 27px 0;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 20px;
+    border: 2px solid $light;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29.26px;
+      color: $light-max-opacity;
+      margin-bottom: 32px;
+    }
+
+    &-button {
+      position: relative;
+      top: 34px;
+      max-height: 60px;
+      width: 50%;
+      padding: 18px 0;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24.38px;
+      color: $black;
+      background-color: $light;
+      border-radius: 100px;
+    }
+  }
+  &__string {
+    display: flex;
+    gap: 26px;
+  }
+}

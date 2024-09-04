@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { WindowWidthContext } from '../context/windowWidthContext';
 import Header from './Header';
 import MainPage from '../pages/Main';
+import AuthPage from '../pages/Auth';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
+        <Route path="/register" element={<AuthPage />}></Route>
       </Routes>
     </WindowWidthContext.Provider>
   );
