@@ -4,13 +4,15 @@ const NavigationItem: React.FC<{
   imgSrc: string;
   altText: string;
   className: string;
-}> = ({ imgSrc, altText, className }) => {
+  path: string;
+}> = ({ imgSrc, altText, className, path }) => {
   return (
     <li className="navigation-item">
       <NavigationButton
         imgSrc={imgSrc}
         altText={altText}
         className={className}
+        path={path}
       />
     </li>
   );

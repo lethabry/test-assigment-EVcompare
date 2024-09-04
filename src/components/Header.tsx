@@ -24,6 +24,7 @@ const Header: React.FC = () => {
                   imgSrc={el.imgSrc}
                   altText={el.altText}
                   className={''}
+                  path={el.path}
                 />
               ))
             : navlistMobile.map((el) => (
@@ -32,6 +33,7 @@ const Header: React.FC = () => {
                   imgSrc={el.imgSrc}
                   altText={el.altText}
                   className={''}
+                  path={el.path}
                 />
               ))}
         </ul>

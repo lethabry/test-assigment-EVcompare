@@ -1,12 +1,15 @@
+import { Link } from 'react-router-dom';
+
 const NavigationButton: React.FC<{
   imgSrc: string;
   altText: string;
   className: string;
-}> = ({ imgSrc, altText, className }) => {
+  path: string;
+}> = ({ imgSrc, altText, className, path }) => {
   return (
-    <button className="navigation-item__button">
+    <Link to={path} className="navigation-item__link">
       <img src={`/images/${imgSrc}`} alt={altText} className={className} />
-    </button>
+    </Link>
   );
 };
 
