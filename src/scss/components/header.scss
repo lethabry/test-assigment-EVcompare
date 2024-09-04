@@ -1,5 +1,5 @@
 .header {
-  padding: 30px 0;
+  padding: 30px 0 18px;
   display: grid;
   grid-template-columns: minmax(18.3%, 330px) minmax(25%, 460px) 1fr;
   align-items: center;
@@ -12,6 +12,7 @@
   }
 
   @media (max-width: 650px) {
+    padding: 20px 0 18px;
     grid-template-columns: minmax(142px, 1fr) 1fr;
     column-gap: 48px;
   }
