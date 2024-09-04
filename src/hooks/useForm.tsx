@@ -1,19 +1,24 @@
 import { useState } from 'react';
 import { EMAIL_REGEX } from '../utils/emailRegex';
+import {
+  IFormValues,
+  IInputValues,
+  IValidationSettings,
+} from '../interfaces/interfaces';
 
-const useForm = (inputValues = {}) => {
+const useForm = (inputValues: IInputValues = {}): IFormValues => {
   const [values, setValues] = useState(inputValues);
   const [errors, setErrors] = useState({});
   const [isValid, setIsValid] = useState(false);
 
-  const emailSettings = {
+  const emailSettings: IValidationSettings = {
     email: {
       regExp: EMAIL_REGEX,
       validationError: 'Некорректный адрес электронной почты',
     },
   };
 
-  function checkEmailValidation(name, value) {
+  const checkEmailValidation = (name: string, value: string) => {
     if (!emailSettings[name]) {
       return;
     }
@@ -22,13 +27,17 @@ const useForm = (inputValues = {}) => {
       setErrors({ ...errors, [name]: emailSettings[name].validationError });
       setIsValid(false);
     }
-  }
+  };
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
     setValues({ ...values, [name]: value });
     setErrors({ ...errors, [name]: event.target.validationMessage });
-    setIsValid(event.target.closest('.form').checkValidity());
+    if (event.target instanceof HTMLFormElement) {
+      setIsValid(event.target.checkValidity());
+    } else if (event.target instanceof HTMLInputElement) {
+      setIsValid(event.target.checkValidity());
+    }
     checkEmailValidation(name, value);
   };
 

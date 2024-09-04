@@ -22,6 +22,9 @@
     &::placeholder {
       color: $light-max-opacity;
     }
+    &_error {
+      border: 2px solid $active;
+    }
   }
 
   &__error {
